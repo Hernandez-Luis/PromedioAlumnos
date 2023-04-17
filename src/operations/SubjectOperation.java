@@ -18,7 +18,6 @@ public class SubjectOperation {
 
     }
 
-
     public void registerSubjects(Scanner scanner) {
         subjects = new Subject[serviceArraySubject.sizeArray(scanner)];
         for (int i = 0; i < subjects.length; i++) {

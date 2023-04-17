@@ -1,5 +1,7 @@
 package options;
 
+import calificaciones.Calificaciones;
+import calificaciones.ValidaCalificacion;
 import operations.StudentOperations;
 import operations.SubjectOperation;
 import operations.TeacherOperation;
@@ -21,20 +23,19 @@ public class MenuMain {
         registrationMenu = new RegistrationMenu();
     }
 
-
     public void menuPrincipal() {
+        ValidaCalificacion validaCalificacion = new ValidaCalificacion();
         showOption();
         String menuOption = scanner.next();
         switch (menuOption) {
-            case "Registrar" ->
-                    registrationMenu.registration(scanner, subjectOperation, teacherOperation, studentOperations);
-            case "Consultar" ->
+            case "1" ->
+                    registrationMenu.registration(scanner,subjectOperation, teacherOperation, studentOperations);
+            case "2" ->
                     QueryMenu.registrationAssignment(scanner, subjectOperation, teacherOperation, studentOperations);
             default -> System.out.println("Opción invalida");
         }
         menuPrincipal();
     }
-
 
     private void showOption() {
         System.out.println("""

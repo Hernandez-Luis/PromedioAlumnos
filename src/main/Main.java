@@ -1,6 +1,7 @@
 package main;
 
 import assignsubject.AssignSubject;
+import calificaciones.ValidaCalificacion;
 import operations.OperationAssign;
 import operations.StudentOperations;
 
@@ -19,15 +20,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-     /*   MenuMain menuMain = new MenuMain(new Scanner(System.in), new SubjectOperation(new ServiceArraySubject(), new ServiceWriteSubject()),
+     MenuMain menuMain = new MenuMain(new Scanner(System.in), new SubjectOperation(new ServiceArraySubject(), new ServiceWriteSubject()),
                 new TeacherOperation(new ServiceArrayTeacher(), new ServiceWriteTeacher()),
                 new StudentOperations(new ServiceArrayStudent(), new ServiceWriteStudent()));
-        menuMain.menuPrincipal();*/
-
+        menuMain.menuPrincipal();
     }
-
-
-
-
-
 }

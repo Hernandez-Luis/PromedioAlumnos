@@ -1,5 +1,6 @@
 package options;
 
+import calificaciones.Calificaciones;
 import operations.StudentOperations;
 import operations.SubjectOperation;
 import operations.TeacherOperation;
@@ -14,30 +15,29 @@ public class QueryMenu {
         showOption();
         String option = scanner.next();
         switch (option) {
-            case "Alumnos" -> {
+            case "1" -> {
                 for (Student student : studentOperations.requestStudents()) {
                     System.out.println(" ");
                     System.out.println(student);
                     System.out.println("*******************************************************************");
                 }
             }
-            case "Profesores" -> {
+            case "2" -> {
                 for (Teacher t : teacherOperation.requestTeachers()) {
                     System.out.println(" ");
                     System.out.println(t);
                     System.out.println("*******************************************************************");
                 }
             }
-            case "Materias" -> {
+            case "3" -> {
                 for (Subject subject : subjectOperation.requestSubjects()) {
                     System.out.println(" ");
                     System.out.println(subject);
                     System.out.println("*******************************************************************");
-
                 }
             }
-            case "Asignaciones" -> System.out.println("Sin implementación");
-            case "Regresar" ->
+            case "4" -> System.out.println("Sin implementación");
+            case "5" ->
                     new MenuMain(scanner, subjectOperation, teacherOperation, studentOperations).menuPrincipal();
             default -> System.out.println("Opción invalida");
         }
@@ -48,7 +48,7 @@ public class QueryMenu {
                 Escriba la operación de consulta a realizar:\s
                 1.- Alumnos \s
                 2.- Profesores\s
-                3.- Materias\s
+                3.- Materias/Calificaciones\s
                 4.- Asignaciones\s
                 5.- Regresar\s
                 """);

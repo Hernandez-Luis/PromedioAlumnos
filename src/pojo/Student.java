@@ -1,8 +1,9 @@
 package pojo;
 
 public class Student extends Person {
+    public Subject [] subjects;
     private String idStudent;
-    private int grade;
+    public int grade;
     private String collegeCareer;
 
     //Constructores de la clase
@@ -39,6 +40,10 @@ public class Student extends Person {
 
     public String getCollegeCareer() {
         return collegeCareer;
+    }
+
+    public void setSubjects(Subject[] subjects) {
+        this.subjects = subjects;
     }
 
     @Override

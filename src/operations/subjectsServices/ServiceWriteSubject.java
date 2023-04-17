@@ -24,5 +24,4 @@ public class ServiceWriteSubject {
     public Subject readData() {
         return subject;
     }
-
 }

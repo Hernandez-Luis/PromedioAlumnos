@@ -1,13 +1,15 @@
 package operations;
 
+import calificaciones.Calificaciones;
 import operations.studentsServices.ServiceArrayStudent;
 import operations.studentsServices.ServiceWriteStudent;
 import pojo.Student;
+import pojo.Subject;
 
 import java.util.Scanner;
 
 public class StudentOperations {
-    private Student[] students;
+    public Student[] students;
     private final ServiceWriteStudent serviceWriteStudent;
     private final ServiceArrayStudent serviceArrayStudent;
 
@@ -25,6 +27,8 @@ public class StudentOperations {
         }
     }
 
+
+
     public Student[] requestStudents() {
         return students;
     }
@@ -32,5 +36,6 @@ public class StudentOperations {
     public int countStudents() {
         return students.length;
     }
+
 
 }

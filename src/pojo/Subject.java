@@ -1,6 +1,7 @@
 package pojo;
 
 public class Subject {
+    public double calificacion;
     private String idSubject;
     private String subjectName;
     private int credits;
@@ -39,6 +40,10 @@ public class Subject {
         return credits;
     }
 
+    public void setCalificacion(double calificacion) {
+        this.calificacion = calificacion;
+    }
+
     @Override
     public String toString() {
         return "Id: " + idSubject
@@ -46,7 +51,3 @@ public class Subject {
                 + " Creditos de materia: " + credits;
     }
 }
-
-
-
-
